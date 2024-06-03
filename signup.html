@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/signup.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__main container">
+            <img class="header__logo" src="/assets/img/logo.png">
+            
+            <form class="header__search" method="get" action="/">
+                <input class="header__searchinput" type="text" name="search" placeholder="Search products">
+                <button class="header__searchbutton" type="submit">
+                    <img class="header__searchicon" src="/assets/img/icons/lupa.png" alt="Search">
+                </button>
+            </form>
+
+            <div class="header__right">
+                <a class="header__cartlink" href="/cart.html">
+                    <img class="header__carticon" src="/assets/img/icons/shopping-cart.png">
+                    <span class="header__cartamount"></span>
+                    <div>
+                        <span class="header__carttext">My Cart</span>
+                        <span class="header__cartprice">$ 0.00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="header__menu">
+            <span class="header__button">
+                <img src="/assets/img/icons/hamburger_white.png" width="24">
+                MENU
+            </span>
+            <div class="header__links closed">
+                <a class="header__link" href="/">HOME</a>
+                <a class="header__link" href="/login.html">LOGIN</a>
+                <a class="header__link" href="/signup.html">SIGN UP</a>
+                <a class="header__link" href="/manage.html">MANAGE</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main container">
+        <div class="heading">
+            <h1>Sign up</h1>
+        </div>
+
+        <section class="signup box">
+            <p>Please fill the form below to create your user account</p>
+            
+            <form class="signup__form">
+                <label for="username">Username:</label>
+                <input class="form-input" type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input class="form-input" type="password" id="password" name="password" required>
+                <br>
+                <label for="email">E-mail:</label>
+                <input class="form-input" type="text" id="email" name="email" required>
+                <br>
+                <label for="phone">Phone number:</label>
+                <input class="form-input" type="text" id="phone" name="phone" required>
+                <br>
+                <label for="firstname">First name:</label>
+                <input class="form-input" type="text" id="firstname" name="firstname" required>
+                <br>
+                <label for="lastname">Last name:</label>
+                <input class="form-input" type="text" id="lastname" name="lastname" required>
+                <br>
+                <label for="street">Street:</label>
+                <input class="form-input" type="text" id="street" name="street" required>
+                <br>
+                <label for="number">Number:</label>
+                <input class="form-input" type="text" id="number" name="number" required>
+                <br>
+                <label for="zipcode">Zip code:</label>
+                <input class="form-input" type="text" id="zipcode" name="zipcode" required>
+                <br>
+                <button class="button" type="submit">Sign up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <img class="footer__logo" src="/assets/img/logo.png">
+        <div class="footer__about">
+            <p class="footer__text">e-commerce</p>
+            <p class="footer__text">CNPJ: 12.345.678/0001-90</p>
+            <p class="footer__text">Address: Avenida Minas Gerais, 700 - Centro, Governador Valadares - MG - Brazil, CEP 35010-151</p>
+            <p class="footer__text">Phone: (33) 1234-5678 | E-mail: contato@ecommerce.com.br</p>
+        </div>
+        <div class="footer__social">
+            <a class="footer__facebook" href="https://facebook.com"></a>
+            <a class="footer__instagram" href="https://instagram.com"></a>
+        </div>
+    </footer>
+
+    <script type="module" src="/assets/js/header.js"></script>
+    <script type="module" src="/assets/js/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.signup {
+    padding: 1rem 2rem;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.signup input {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+.signup button {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+}

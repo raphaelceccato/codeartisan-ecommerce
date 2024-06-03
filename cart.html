@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/cart.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__main container">
+            <img class="header__logo" src="/assets/img/logo.png">
+            
+            <form class="header__search" method="get" action="/">
+                <input class="header__searchinput" type="text" name="search" placeholder="Search products">
+                <button class="header__searchbutton" type="submit">
+                    <img class="header__searchicon" src="/assets/img/icons/lupa.png" alt="Search">
+                </button>
+            </form>
+
+            <div class="header__right">
+                <a class="header__cartlink" href="/cart.html">
+                    <img class="header__carticon" src="/assets/img/icons/shopping-cart.png">
+                    <span class="header__cartamount"></span>
+                    <div>
+                        <span class="header__carttext">My Cart</span>
+                        <span class="header__cartprice">$ 0.00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="header__menu">
+            <span class="header__button">
+                <img src="/assets/img/icons/hamburger_white.png" width="24">
+                MENU
+            </span>
+            <div class="header__links closed">
+                <a class="header__link" href="/">HOME</a>
+                <a class="header__link" href="/login.html">LOGIN</a>
+                <a class="header__link" href="/signup.html">SIGN UP</a>
+                <a class="header__link" href="/manage.html">MANAGE</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main container">
+        <div class="heading">
+            <h1>Your cart</h1>
+        </div>
+
+        <section class="cart box">
+            <p class="cart__amount"></p>
+            <br>
+            
+            <div class="cart__list">
+                <template id="item-template">
+                    <a class="cart__item" href="/product.html?id={id}">
+                        <img class="cart__thumbnail">
+                        <div class="cart__middle">
+                            <h1>{title}</h1>
+                            <p class="cart__description">{description}</p>
+                        </div>
+                        <div class="cart__options">
+                            <div class="cart__price">
+                                <h1>{price}</h1>
+                                <small> each</small>
+                            </div>
+                            <p class="cart__amount">Amount: {amount}</p>
+                            <button class="cart__remove button">Remove</button>
+                        </div>
+                    </a>
+                </template>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <div class="cart__total">
+                <p>Total price:</p>
+                <h1 class="cart__price"></h1>
+                <button class="cart__clear button">Clear cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <img class="footer__logo" src="/assets/img/logo.png">
+        <div class="footer__about">
+            <p class="footer__text">e-commerce</p>
+            <p class="footer__text">CNPJ: 12.345.678/0001-90</p>
+            <p class="footer__text">Address: Avenida Minas Gerais, 700 - Centro, Governador Valadares - MG - Brazil, CEP 35010-151</p>
+            <p class="footer__text">Phone: (33) 1234-5678 | E-mail: contato@ecommerce.com.br</p>
+        </div>
+        <div class="footer__social">
+            <a class="footer__facebook" href="https://facebook.com"></a>
+            <a class="footer__instagram" href="https://instagram.com"></a>
+        </div>
+    </footer>
+
+    <script type="module" src="/assets/js/header.js"></script>
+    <script type="module" src="/assets/js/cart.js"></script>
+</body>
+</html>

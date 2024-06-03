@@ -1,0 +1,55 @@
+.box {
+    padding: 0.5rem 2rem;
+}
+
+
+.main__sections {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+.add, .update, .remove {
+    width: 20rem;
+    max-width: 100%;
+    position: relative;
+}
+
+
+select, input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+
+.update__image, .remove__image {
+    width: 5rem;
+    object-fit: scale-down;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+
+.button {
+    display: block;
+    margin: 1rem auto;
+}
+
+
+
+@media (max-width: 888px) {
+    .add, .update, .remove {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    .box {
+        padding: 0.5rem 1.5rem;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/manage.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__main container">
+            <img class="header__logo" src="/assets/img/logo.png">
+            
+            <form class="header__search" method="get" action="/">
+                <input class="header__searchinput" type="text" name="search" placeholder="Search products">
+                <button class="header__searchbutton" type="submit">
+                    <img class="header__searchicon" src="/assets/img/icons/lupa.png" alt="Search">
+                </button>
+            </form>
+
+            <div class="header__right">
+                <a class="header__cartlink" href="/cart.html">
+                    <img class="header__carticon" src="/assets/img/icons/shopping-cart.png">
+                    <span class="header__cartamount"></span>
+                    <div>
+                        <span class="header__carttext">My Cart</span>
+                        <span class="header__cartprice">$ 0.00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="header__menu">
+            <span class="header__button">
+                <img src="/assets/img/icons/hamburger_white.png" width="24">
+                MENU
+            </span>
+            <div class="header__links closed">
+                <a class="header__link" href="/">HOME</a>
+                <a class="header__link" href="/login.html">LOGIN</a>
+                <a class="header__link" href="/signup.html">SIGN UP</a>
+                <a class="header__link" href="/manage.html">MANAGE</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main container">
+        <div class="main__heading heading">
+            <h1 class="main__title">Product Management</h1>
+        </div>
+
+        <div class="main__sections">
+            <section class="add box">
+                <h2>Add product</h2>
+                <form class="add__form">
+                    <label for="title">Title:</label>
+                    <input class="form-input" type="text" id="add-title" name="title" required>
+                    <br>
+                    <label for="price">Price:</label>
+                    <input class="form-input" type="number" id="add-price" name="price" step="0.01" min="0" value="0,00" required>
+                    <br>
+                    <label for="description">Description:</label>
+                    <input class="form-input" type="text" id="add-description" name="description" required>
+                    <br>
+                    <label for="image">Image URL:</label>
+                    <input class="form-input" type="text" id="add-image" name="image" required>
+                    <br>
+                    <label for="category">Category:</label>
+                    <select class="category-select" id="add-category" name="category" required></select>
+                    <br>
+                    <button class="button" type="submit">Add product</button>
+                </form>
+            </section>
+
+            <section class="update box">
+                <h2>Update product</h2>
+                <img class="update__image">
+                <form class="update__form">
+                    <select class="product-select" id="update-product-id" name="id" required>
+                        <option value="-1" selected>Select product</option>
+                    </select>
+                    <br>
+                    <label for="id">ID:</label>
+                    <input class="form-input" type="text" id="update-id" name="id" disabled>
+                    <br>
+                    <label for="title">Title:</label>
+                    <input class="form-input" type="text" id="update-title" name="title" required>
+                    <br>
+                    <label for="price">Price:</label>
+                    <input class="form-input" type="number" id="update-price" name="price" step="0.01" min="0" value="0,00" required>
+                    <br>
+                    <label for="description">Description:</label>
+                    <input class="form-input" type="text" id="update-description" name="description" required>
+                    <br>
+                    <label for="image">Image URL:</label>
+                    <input class="form-input" type="text" id="update-image" name="image" required>
+                    <br>
+                    <label for="category">Category:</label>
+                    <select class="category-select" id="update-category" name="category" required></select>
+                    <br>
+                    <button class="button" type="submit">Update product</button>
+                </form>
+            </section>
+
+            <section class="remove box">
+                <h2>Remove product</h2>
+                <img class="remove__image">
+                <form class="remove__form">
+                    <select class="product-select" id="remove-product-id" name="id" required>
+                        <option value="-1" selected>Select product</option>
+                    </select>
+                    <br>
+                    <button class="button" type="submit">Remove product</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer container">
+        <img class="footer__logo" src="/assets/img/logo.png">
+        <div class="footer__about">
+            <p class="footer__text">e-commerce</p>
+            <p class="footer__text">CNPJ: 12.345.678/0001-90</p>
+            <p class="footer__text">Address: Avenida Minas Gerais, 700 - Centro, Governador Valadares - MG - Brazil, CEP 35010-151</p>
+            <p class="footer__text">Phone: (33) 1234-5678 | E-mail: contato@ecommerce.com.br</p>
+        </div>
+        <div class="footer__social">
+            <a class="footer__facebook" href="https://facebook.com"></a>
+            <a class="footer__instagram" href="https://instagram.com"></a>
+        </div>
+    </footer>
+
+    <script type="module" src="/assets/js/header.js"></script>
+    <script type="module" src="/assets/js/manage.js"></script>
+</body>
+</html>
