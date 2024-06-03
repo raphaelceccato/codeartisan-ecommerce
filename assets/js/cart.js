@@ -8,7 +8,7 @@ const cartList = document.querySelector(".cart__list");
 
 (async () => {
     const items = Cart.getItems();
-    const itemCount = Object.keys(items).length;
+    const itemCount = Cart.getTotalAmount();
     const totalPrice = Cart.getTotalPrice();
 
     document.querySelector(".cart__amount").textContent = `There are ${(itemCount > 0) ? itemCount : "no"} item(s) in your cart`;
